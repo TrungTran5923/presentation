@@ -1,0 +1,879 @@
+body {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.933);
+}
+
+.carousel {
+    z-index: 1;
+}
+.carousel-inner {
+    position: relative;
+}
+.carousel .carousel-inner .bg {
+    height: 500px;
+    filter: grayscale(1);
+}
+.carousel .carousel-inner::after {
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.carousel-caption {
+    position: absolute;
+    top: 30%;
+    text-align: left;
+    z-index: 4;
+}
+.carousel-caption h3 {
+    color: var(--primary-color);
+}
+.carousel-caption span {
+    color: var(--primary-color);
+}
+.carousel-caption button {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 0px 10px 0px 10px;
+    transition: 0.5s;
+}
+.carousel-caption button:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+.carousel-inner .carousel-item .car {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 50%;
+    z-index: 3;
+}
+.carousel-inner .car img {
+    z-index: 3;
+}
+.carousel-inner .shadow {
+    display: none;
+}
+.carousel-inner .carousel-item:nth-child(2) .car {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    width: 50%;
+    z-index: 3;
+}
+.carousel-inner .carousel-item:nth-child(3) .car {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    width: 50%;
+    z-index: 3;
+}
+.filter {
+    position: absolute;
+    top: 450px;
+    left: 70px;
+    background-color: var(--secondary-color);
+    width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    padding-top: 20px;
+    z-index: 3;
+}
+.filter .filter-title {
+    color: black;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.431);
+    margin-bottom: 30px;
+}
+
+.filter-box .dropdown button {
+    background-color: transparent;
+    border: 1px solid grey;
+    color: grey;
+    width: 90%;
+    text-align: left;
+}
+.filter-box .dropdown button.active {
+    color: var(--primary-color);
+}
+
+.filter-box .find button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 6px 12px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 28px;
+}
+.mostpick {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 300px;
+}
+
+.mostpick .title {
+    display: flex;
+    justify-content: space-between;
+}
+.mostpick .title .text p {
+    color: var(--primary-color);
+}
+.mostpick .title .text h2 {
+    color: var(--secondary-color);
+}
+.mostpick .title .btn button {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.mostpick .title .btn button:hover {
+    opacity: 0.8;
+}
+.mostpick .title .btn button.active {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.mostpick .new {
+    display: none;
+}
+.mostpick .new.active {
+    display: block;
+}
+.mostpick .used {
+    display: none;
+}
+.mostpick .used.active {
+    display: block;
+}
+.mostpick .product .card {
+    position: relative;
+    overflow: hidden;
+}
+.mostpick .product .card-title {
+    color: black;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+.mostpick .product .card-subtitle {
+    justify-content: space-between;
+}
+.mostpick .product .card-subtitle ul li {
+    margin-right: 14px;
+    color: black;
+}
+.mostpick .product .card-subtitle ul li:first-child {
+    background-color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+.mostpick .product .card-subtitle .price {
+    color: var(--primary-color);
+}
+.mostpick .product .card .tag {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    transform: rotate(-45deg);
+}
+.mostpick .product .card-img {
+    overflow: hidden;
+}
+.mostpick .product .left img {
+    height: 534px;
+}
+.mostpick .product .right .card-title {
+    color: black;
+    border: none;
+}
+.mostpick .product .right .price {
+    color: var(--primary-color);
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+.mostpick .product .right .card-subtitle {
+    font-size: 14px;
+    z-index: 2;
+}
+.mostpick .product .right .cardview {
+    margin-bottom: 20px;
+}
+.mostpick .product .right .cardview img {
+    height: 170px;
+    object-fit: cover;
+}
+.mostpick .product .card-img-top {
+    transition: 0.5s;
+}
+.mostpick .product .card:hover img {
+    transform: scale(1.1);
+}
+.popularmake {
+    margin-bottom: 80px;
+}
+.popularmake .list {
+    display: none;
+}
+.popularmake .list.active {
+    display: block;
+}
+
+.popularmake .title .title-text {
+    color: var(--primary-color);
+}
+.popularmake .title {
+    justify-content: space-between;
+}
+.popularmake .title .title-btn button {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.popularmake .title .title-btn button:hover {
+    opacity: 0.8;
+}
+.popularmake .title .title-btn button.active {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.popularmake .price {
+    color: var(--primary-color);
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+.popularmake .card-subtitle ul li {
+    margin-right: 14px;
+    color: black;
+}
+.popularmake .card-subtitle ul li:first-child {
+    background-color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+.popularmake .card {
+    overflow: hidden;
+}
+.popularmake .cardview .card-img-top {
+    transition: 0.5s;
+    overflow: hidden;
+}
+.popularmake .cardview img {
+    height: 170px;
+    object-fit: cover;
+}
+.popularmake .cardview:hover img {
+    transform: scale(1.1);
+}
+.popularmake .cardview .card-img {
+    overflow: hidden;
+}
+.why {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.why .text span {
+    color: var(--primary-color);
+}
+.why .text p {
+    font-weight: 200;
+}
+.why .right .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.5s;
+}
+.why .right .card:hover {
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--primary-color) 0px 8px 24px;
+}
+.why .right .card .top {
+    justify-content: space-between;
+}
+.why .right .card .icon i {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+.why .right .card .top .num h2 {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.why .right .card .bot p {
+    font-weight: 200;
+}
+.testimonial .title {
+    text-align: center;
+}
+.testimonial .title p {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+.testimonial .title h2 {
+    color: var(--secondary-color);
+}
+.testimonial .title .line1 {
+    width: 150px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+.testimonial .title .line2 {
+    width: 100px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.testimonial .card {
+    position: relative;
+}
+.testimonial .card-body {
+    text-align: center;
+    color: black;
+}
+.testimonial .card-body h5 {
+    color: var(--primary-color);
+}
+.testimonial .card-body .card-subtitle p {
+    font-weight: 300;
+}
+.testimonial .card-body .icon i {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+.testimonial .card-img-top {
+    object-fit: cover;
+    height: 240px;
+}
+.testimonial .card-body .ava {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+.testimonial .card-body .ava img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.blog {
+    margin-top: 60px;
+}
+.blog .title {
+    text-align: center;
+}
+.blog .title p {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+.blog .title h2 {
+    color: var(--secondary-color);
+}
+.blog .title .line1 {
+    width: 150px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+.blog .title .line2 {
+    width: 100px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.blog .card {
+    margin-top: 30px;
+    background-color: transparent;
+    border: none;
+}
+.blog .card .left {
+    border-left: 2px dashed var(--primary-color);
+}
+.blog .card:nth-child(odd) .left {
+    border-left: none;
+    border-right: 2px dashed var(--primary-color);
+}
+
+.blog .card .left img {
+    border-radius: 5px;
+}
+.blog .card .right {
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.blog .card .right .detail {
+    color: var(--primary-color);
+}
+.blog .card .right .content-title {
+    color: var(--secondary-color);
+}
+.blog .card .right .content-subtitle {
+    color: rgba(92, 92, 92, 0.933);
+}
+.blog .card .right .link {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+.blog .card .right .link:hover {
+    color: var(--primary-color);
+    background-color: white;
+    border: 1px solid var(--primary-color);
+}
+.footer {
+    margin-top: 100px;
+    padding-top: 20px;
+    background-image: linear-gradient(180deg, rgb(27 27 27 / 0%) 40%, var(--primary-color) 100%);
+}
+.footer .top .title {
+    color: var(--primary-color);
+}
+.footer .top .content {
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+.footer .top .content button {
+    padding: 5px 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.5s;
+}
+.footer .top .content button:hover {
+    opacity: 0.8;
+}
+.footer .top .content li {
+    margin-bottom: 8px;
+}
+.footer .top .content li a {
+    color: white;
+    transition: 0.5s;
+}
+.footer .top .content li:hover a {
+    margin-left: 10px;
+}
+.footer .top .content input {
+    display: block;
+    padding: 8px 20px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    outline: none;
+}
+.footer .bot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(27, 27, 27, 0.526);
+}
+.footer .bot .right i {
+    font-size: 30px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+@media (max-width: 1400px) {
+    .navbar .navbar-brand {
+        width: 10%;
+    }
+    .navbar .menu {
+        margin-left: 200px;
+    }
+    .nav-item {
+        display: flex;
+        margin-right: 0px;
+    }
+    .nav-item a {
+        font-size: 16px;
+    }
+    .filter {
+        top: 520px;
+        left: 70px;
+    }
+    .mostpick .product .left img {
+        height: 500px;
+    }
+    .mostpick .product .right .cardview {
+        margin-bottom: 12px;
+    }
+    .mostpick .product .right .cardview img {
+        height: 160px;
+        object-fit: cover;
+    }
+    .mostpick .product .right .card-subtitle li {
+        margin-right: 6px;
+    }
+    .mostpick .product .right .card-subtitle p {
+        font-size: 14px;
+    }
+    .popularmake .price {
+        margin-top: 10px;
+    }
+    .popularmake .card-subtitle li {
+        margin-right: 6px;
+    }
+    .popularmake .card-subtitle p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1200px) {
+    .nav-item a {
+        font-size: 12px;
+    }
+    .navbar .menu {
+        margin-left: 100px;
+    }
+    .hotline h4 {
+        font-size: 20px;
+    }
+    .carousel-inner .carousel-item:nth-child(2) .car {
+        top: 12%;
+    }
+    .carousel-inner .carousel-item:nth-child(3) .car {
+        top: 15%;
+    }
+    .filter {
+        top: 520px;
+        left: 60px;
+    }
+    .mostpick .product .left img {
+        height: 500px;
+    }
+    .mostpick .product .right .cardview {
+        margin-bottom: 16px;
+    }
+    .mostpick .product .right .cardview img {
+        height: 150px;
+        object-fit: cover;
+    }
+    .mostpick .product .right h6 {
+        font-size: 18px;
+    }
+    .mostpick .product .right .card-subtitle li {
+        margin-right: 6px;
+    }
+    .mostpick .product .right .card-subtitle p {
+        font-size: 10px;
+    }
+    .popularmake .price {
+        margin-top: 10px;
+    }
+    .popularmake .card-subtitle li {
+        margin-right: 0px;
+    }
+    .popularmake .card-subtitle p {
+        font-size: 10px;
+        margin: 0;
+    }
+    .why .bot p {
+        font-size: 12px;
+    }
+    .testimonial .card-subtitle p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 992px) {
+    .navbar .navbar-brand {
+        width: 100%;
+    }
+    .navbar .menu {
+        margin-left: 10px;
+    }
+    .nav-item {
+        font-size: 12px;
+    }
+    .navbar .hotline {
+        visibility: hidden;
+    }
+    .navbar .hotline h4 {
+        display: none;
+    }
+    .navbar .hotline i {
+        display: none;
+    }
+    .carousel-inner .carousel-item .car {
+        top: 30%;
+    }
+    .carousel-inner .carousel-item:nth-child(2) .car {
+        top: 10%;
+    }
+    .carousel-inner .carousel-item:nth-child(3) .car {
+        top: 15%;
+    }
+    .filter-box .dropdown h5 {
+        font-size: 18px;
+    }
+    .filter-box .find button {
+        margin-left: 40px;
+        margin-top: 0;
+    }
+    .mostpick {
+        margin-top: 400px;
+    }
+    .mostpick .product .left {
+        margin-bottom: 10px;
+    }
+    .mostpick .product .right .card-subtitle li {
+        margin-right: 20px;
+    }
+    .mostpick .product .right .card-subtitle p {
+        font-size: 14px;
+    }
+    .popularmake .title-btn button {
+        font-size: 14px;
+    }
+    .popularmake .cardview {
+        margin-bottom: 10px;
+    }
+    .popularmake .card-subtitle p {
+        font-size: 14px;
+        margin: 0;
+    }
+    .why .right .card {
+        width: 160px;
+        margin-right: 20px;
+    }
+    .why .right .card .bot p {
+        display: none;
+    }
+    .testimonial .card-subtitle p {
+        font-size: 14px;
+    }
+    .testimonial .review {
+        margin-bottom: 20px;
+    }
+    .testimonial .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .blog .right .text {
+        margin-top: 14px;
+    }
+    .blog .right button {
+        margin-bottom: 20px;
+    }
+    .footer .top .title {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .carousel-caption h3 {
+        font-size: 14px;
+    }
+    .carousel-caption h2 {
+        font-size: 18px;
+    }
+    .carousel-caption p {
+        font-size: 14px;
+    }
+    .carousel-inner .carousel-item:nth-child(2) .car {
+        top: 20%;
+    }
+    .carousel-inner .carousel-item:nth-child(3) .car {
+        top: 20%;
+    }
+}
+@media (max-width: 769px) {
+    .navbar .navbar-brand {
+        width: 30%;
+    }
+    .nav-item {
+        font-size: 4px;
+        margin-right: 0px;
+    }
+    .nav-item a {
+        font-size: 10px;
+    }
+    .menu {
+        margin-left: 50px;
+    }
+    .filter {
+        top: 420px;
+        left: 40px;
+    }
+
+    .filter-title h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .filter-box .dropdown h5 {
+        font-size: 16px;
+    }
+    .filter-box .find button {
+        margin-left: 30px;
+        margin-top: 0;
+    }
+    .mostpick .product .right h6 {
+        font-size: 16px;
+    }
+    .mostpick .product .right .card-subtitle li {
+        margin-right: 6px;
+    }
+    .mostpick .product .right .card-subtitle p {
+        font-size: 12px;
+    }
+    .popularmake .title-btn {
+        display: flex;
+    }
+    .popularmake .title-btn button {
+        font-size: 10px;
+    }
+    .popularmake .cardview {
+        margin-bottom: 10px;
+    }
+    .popularmake .card-subtitle p {
+        font-size: 10px;
+        margin: 0;
+    }
+    .why .right .card {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .testimonial .card-subtitle p {
+        font-size: 12px;
+    }
+    .footer .top .title {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 575px) {
+    .navbar .navbar-toggler {
+        margin-left: 300px;
+    }
+    .filter-box .find button {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+    .mostpick .product .left img {
+        height: 300px;
+        object-fit: cover;
+    }
+}
+@media (max-width: 532px) {
+    .navbar .navbar-toggler {
+        margin-left: 180px;
+    }
+    .filter {
+        top: 400px;
+        left: 22px;
+    }
+    .filter-box .find button {
+        margin-left: 18px;
+        margin-top: 0;
+    }
+    .carousel-caption {
+        top: 20%;
+    }
+    .carousel-inner .carousel-item .car {
+        top: 10%;
+        left: 30%;
+    }
+    .carousel-inner .carousel-item:nth-child(2) .car {
+        top: 5%;
+    }
+    .carousel-inner .carousel-item:nth-child(3) .car {
+        top: 5%;
+    }
+    .mostpick {
+        margin-top: 350px;
+    }
+    .mostpick .title .text p {
+        font-size: 12px;
+    }
+    .mostpick .title .btn button {
+        font-size: 10px;
+    }
+    .mostpick .product .left .card-subtitle p {
+        font-size: 10px;
+    }
+    .mostpick .product .right h6 {
+        font-size: 16px;
+    }
+    .mostpick .product .right .cardview .card {
+        width: 100%;
+    }
+    .mostpick .product .right .card-subtitle li {
+        margin-right: 6px;
+    }
+    .mostpick .product .right .card-subtitle p {
+        font-size: 10px;
+    }
+    .mostpick .title .btn button {
+        font-size: 10px;
+        padding: 5px 14px;
+    }
+    .mostpick .title .btn button.active {
+        font-size: 10px;
+        padding: 5px 14px;
+    }
+    .popularmake .title-btn {
+        display: block;
+        text-align: right;
+    }
+    .popularmake .title-btn button {
+        margin-bottom: 10px;
+    }
+    .popularmake .card-subtitle ul li {
+        margin-right: 6px;
+    }
+    .popularmake .card-subtitle p {
+        font-size: 10px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer input {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .footer .bot {
+        display: block;
+    }
+}
+@media (max-width: 362px) {
+    .navbar .navbar-toggler {
+        margin-left: 160px;
+    }
+}

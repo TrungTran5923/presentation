@@ -1,0 +1,227 @@
+.head-banner {
+    position: relative;
+}
+.head-banner .banner {
+    width: 100%;
+    position: relative;
+}
+.head-banner .banner::after {
+    content: "";
+    background-image: linear-gradient(180deg, rgb(27 27 27 / 0%) 20%, var(--primary-color) 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+}
+.head-banner .banner img {
+    height: 300px;
+    object-fit: cover;
+}
+.head-banner h2 {
+    position: absolute;
+    color: var(--secondary-color);
+    top: 50%;
+}
+.list {
+    margin-top: 80px;
+    color: var(--secondary-color);
+}
+.list .filter {
+    width: 22%;
+}
+.list .filter .title {
+    margin-bottom: 30px;
+}
+.list .filter .title::after {
+    content: "";
+    background-color: var(--primary-color);
+    height: 2px;
+    width: 80px;
+    position: absolute;
+}
+.list .filter .add {
+    background-color: var(--secondary-color);
+    width: 240px;
+    height: 40px;
+    padding: 5px 10px;
+
+    border-radius: 10px;
+}
+.list .filter .add input {
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+.list .filter .add span {
+    color: var(--primary-color);
+}
+.list .filter .price {
+    margin-top: 20px;
+}
+.list .filter .car-filter {
+    background-color: var(--secondary-color);
+
+    color: black;
+    padding: 20px 20px;
+    border-radius: 12px;
+}
+.list .filter .car-filter .subtitle h5 {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.list .filter .dropdown p {
+    margin: 5px;
+    font-size: 18px;
+}
+.list .filter .dropdown button {
+    width: 100%;
+    margin-bottom: -10px;
+    color: rgba(0, 0, 0, 0.661);
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.377);
+}
+.list .filter .find button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+}
+.list .filter .cal {
+    margin-top: 50px;
+}
+.list .filter .cal h6 {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.list .filter .cal input {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.list .filter .cal .btn {
+    justify-content: space-between;
+    padding: 0;
+}
+.list .filter .cal .btn button {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 12px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.list .list-product {
+    width: 70%;
+}
+.list .list-product .sort .left p {
+    font-weight: 400;
+    color: rgba(179, 179, 179, 0.867);
+}
+.list .list-product .sort .left span p {
+    color: var(--secondary-color);
+}
+.list .list-product .dropdown button {
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.list .list-product .sort .right i {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.list .list-product .sort .right .icon {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--primary-color);
+}
+.list .list-product .sort .right .grid i.active {
+    color: var(--primary-color);
+}
+.list .list-product .product-card .card-body {
+    text-align: center;
+}
+.list .list-product .product-card .card-img {
+    position: relative;
+    overflow: hidden;
+}
+.list .list-product .product-card .card-img .card-hover {
+    position: absolute;
+    font-size: 20px;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(246 112 0 / 61%);
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s;
+}
+.list .list-product .card:hover .card-img .card-hover {
+    top: 0px;
+    opacity: 1;
+}
+.list .list-product .card-hover i {
+    color: var(--secondary-color);
+}
+.list .list-product .product-card .card-title {
+    color: black;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+.list .list-product .product-card .card-subtitle {
+    justify-content: space-between;
+    font-size: 14px;
+}
+.list .list-product .product-card .card-subtitle ul li {
+    margin-right: 14px;
+    color: black;
+}
+.list .list-product .product-card .card-subtitle ul li:first-child {
+    background-color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+.list .list-product .product-card .card-subtitle .price {
+    color: var(--primary-color);
+    margin-top: 10px;
+    position: relative;
+}
+.list .list-product .product-card .card-subtitle .price::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 50px;
+    top: -7px;
+    left: 104px;
+    background-color: var(--primary-color);
+}
+.list .list-product .product-card .card .tag {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px 10px;
+}
+.list .list-product .pagination {
+    width: 50%;
+    margin: 0 auto;
+}
+.list .list-product .pagination li.active a {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+.list .list-product .pagination a {
+    color: var(--primary-color);
+}
